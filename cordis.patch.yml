@@ -1,0 +1,8 @@
+# dsh-opencode-go-usage —— 自包含 bundle 的 patch 层。
+#
+# 作为 bundle 被 `dsh.profile.bundles` 引入时，本文件把自己的 entry 插进
+# cordis 组合树；entry 的 `name` 即本包包名，由 profile 的 node_modules 解析。
+# 这样插件不依赖用户手改 profile 的 cordis.patch.yml，也不会被桌面应用覆盖。
+- insert:
+    - id: opencode-go-usage
+      name: dsh-opencode-go-usage
